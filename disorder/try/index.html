@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Brainwave Analysis Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .header {
+      text-align: center;
+      padding: 20px;
+      background-color: #f2f2f2;
+    }
+    .page-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+    }
+    .result {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .image {
+      max-width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Disorder Prediction Based on EEG Data</h1>
+  </div>
+  <div class="page-container">
+    <h2>Prediction</h2>
+    <label for="eegData">Enter EEG Data in numerical format:</label>
+    <input class="input-field" type="text" id="eegData" placeholder="Enter EEG data...">
+    <p>OR</p>
+    <button class="button">Predict</button>
+    <div class="result" id="predictionResult"></div>
+    <p>Please note that this result is not entirely reliable, and further medical assessment may be required for a conclusive diagnosis.</p>
+
+    <h2>Disorder Comparison</h2>
+    <p>Disorder 1:</p>
+    <select class="input-field">
+      <!-- Options for disorder 1 -->
+    </select>
+    <p>Band 1:</p>
+    <select class="input-field">
+      <!-- Options for band 1 -->
+    </select>
+    <p>Disorder 2:</p>
+    <select class="input-field">
+      <!-- Options for disorder 2 -->
+    </select>
+    <p>Band 2:</p>
+    <select class="input-field">
+      <!-- Options for band 2 -->
+    </select>
+    <div class="image">
+      <!-- Display comparison image -->
+      <img src="comparison_image.jpg" alt="Comparison Image">
+    </div>
+
+    <h2>Stress Level</h2>
+    <!-- Display stress level visualization -->
+
+    <!-- You can add more sections and functionalities as needed -->
+
+  </div>
+
+  <script>
+    // JavaScript code for handling interactions and dynamic content
+    const predictButton = document.querySelector('.button');
+    const eegDataInput = document.getElementById('eegData');
+    const predictionResult = document.getElementById('predictionResult');
+
+    predictButton.addEventListener('click', () => {
+      const inputData = eegDataInput.value;
+      // Simulate prediction logic and update predictionResult content
+      const prediction = 'Bipolar Disorder';
+      predictionResult.textContent = `This individual has the highest probability of having ${prediction}`;
+    });
+  </script>
+</body>
+</html>
